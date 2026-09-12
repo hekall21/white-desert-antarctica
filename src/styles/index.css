@@ -1,0 +1,76 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Cormorant Garamond", "Cinzel", Georgia, serif;
+  --font-display: "Cinzel", "Cormorant Garamond", serif;
+  --font-sans: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+
+  --color-polar-bg: #070B14;
+  --color-polar-surface: #0B1325;
+  --color-polar-elevated: #131E38;
+  --color-polar-ice: #38BDF8;
+  --color-polar-ice-glow: rgba(56, 189, 248, 0.25);
+  --color-polar-amber: #F59E0B;
+  --color-polar-amber-glow: rgba(245, 158, 11, 0.25);
+  --color-polar-white: #F8FAFC;
+  --color-polar-muted: #94A3B8;
+  --color-polar-border: rgba(255, 255, 255, 0.1);
+  --color-polar-border-strong: rgba(255, 255, 255, 0.22);
+}
+
+html {
+  scroll-behavior: smooth;
+  color-scheme: dark;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-polar-bg);
+  color: var(--color-polar-white);
+  overflow-x: hidden;
+}
+
+/* Custom Glassmorphism & High-Contrast Overlays */
+.glass-polar {
+  background: rgba(11, 19, 37, 0.65);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.glass-polar-light {
+  background: rgba(248, 250, 252, 0.08);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.glass-pod {
+  background: radial-gradient(circle at 30% 30%, rgba(245, 158, 11, 0.12), rgba(11, 19, 37, 0.85) 70%);
+  backdrop-filter: blur(24px);
+  border: 1px solid rgba(245, 158, 11, 0.3);
+}
+
+/* Subtle Ice Noise Texture */
+.polar-noise-overlay {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0.035;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+}
+
+/* Polar Gradient Accent text */
+.ice-gradient-text {
+  background: linear-gradient(135deg, #FFFFFF 20%, #38BDF8 80%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.amber-gradient-text {
+  background: linear-gradient(135deg, #FDE68A 10%, #F59E0B 90%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
