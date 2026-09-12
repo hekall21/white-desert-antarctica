@@ -8,7 +8,7 @@ export default function Hero({ onOpenEnquiry, onOpenFilm }) {
       {/* Background Image / Atmosphere with slow cinematic zoom */}
       <div className="absolute inset-0 z-0 overflow-hidden">
         <motion.img
-          src="/assets/hero-mockup.jpg"
+          src="./assets/hero-mockup.jpg"
           alt="Antarctica Luxury Expedition White Desert"
           initial={{ scale: 1.08 }}
           animate={{ scale: 1.0 }}

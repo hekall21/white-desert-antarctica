@@ -76,7 +76,7 @@ export const luxuryCamps = [
     coordinates: "71°32'47\" S, 8°50'11\" E",
     elevation: "2,800m ASL",
     capacity: "Max 12 Guests in 6 Heated Sky-Pods",
-    image: "/assets/hero-mockup.jpg",
+    image: "./assets/hero-mockup.jpg",
     description: "Echo resembles an otherworldly lunar station nestled beneath towering granite monoliths. Each futuristic pod features floor-to-ceiling polar viewing apertures, heated ensuite bathrooms, and bespoke contemporary furnishings.",
     amenities: [
       "Heated aerodynamic fiberglass geodesic pods",
