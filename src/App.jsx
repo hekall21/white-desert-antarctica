@@ -5,7 +5,9 @@ import ExpeditionsGrid from "./components/ExpeditionsGrid";
 import LuxuryCamps from "./components/LuxuryCamps";
 import FlightJourney from "./components/FlightJourney";
 import FounderMission from "./components/FounderMission";
+import PolarDossiers from "./components/PolarDossiers";
 import Footer from "./components/Footer";
+import { CinematicFooter } from "./components/ui/motion-footer";
 import EnquiryModal from "./components/EnquiryModal";
 import FilmModal from "./components/FilmModal";
 
@@ -51,10 +53,18 @@ export default function App() {
 
         {/* Founders & Zero-Trace Mission */}
         <FounderMission />
+
+        {/* 3D Frosted Glass Polar Dossiers */}
+        <PolarDossiers onOpenEnquiry={() => handleOpenEnquiry()} />
       </main>
 
-      {/* Luxury Footer */}
-      <Footer onOpenEnquiry={() => handleOpenEnquiry()} />
+      {/* Cinematic Curtain-Reveal Footer with GSAP ScrollTrigger & Magnetic Buttons */}
+      <CinematicFooter
+        brandTitle="WHITE DESERT"
+        giantText="ANTARCTICA"
+        tagline="Ready for the great white continent?"
+        onOpenEnquiry={() => handleOpenEnquiry()}
+      />
 
       {/* Concierge Reservation Modal */}
       <EnquiryModal
