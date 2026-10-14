@@ -11,3 +11,11 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Academic and personal documents protection (Rule 10)
+*.pdf
+*.docx
+*.pptx
+*.xlsx
+PAPER_*.md
+PROPOSAL_*.md
